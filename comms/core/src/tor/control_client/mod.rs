@@ -32,7 +32,10 @@ mod event;
 pub use event::TorControlEvent;
 
 mod monitor;
+#[cfg(not(fuzzing))]
 mod parsers;
+#[cfg(fuzzing)]
+pub mod parsers;
 mod response;
 
 mod types;
