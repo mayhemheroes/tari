@@ -1,0 +1,7 @@
+project: tari
+target: response-line
+
+cmds:
+  - cmd: /response_line
+  - cmd: /response_line_no_inst @@
+    libfuzzer: false

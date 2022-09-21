@@ -42,6 +42,9 @@ pub use control_client::{
     TorControlPortClient,
 };
 
+#[cfg(fuzzing)]
+pub use control_client::parsers::{response_line, multi_key_value};
+
 mod hidden_service;
 pub use hidden_service::{
     HiddenService,
